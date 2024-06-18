@@ -36,3 +36,20 @@ const myFUnction = function(){
 }
 
 console.log(typeof bigNumber); // type value is different of datatype so check it read about them
+
+
+
+// pause on 2 hour date 18/6/2024  chai aur code
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++memory++++++++++++++++++++++++
+
+// Stack (primitive )  isme hame copy milta hai     and heap (non - primitive)   isme original data milta hai means reference milta hai
+
+let myYoutubename = "sagarchannel";
+
+let updateName = myYoutubename;
+
+console.log(myYoutubename);
+console.log(updateName);
