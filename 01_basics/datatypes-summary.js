@@ -50,6 +50,21 @@ console.log(typeof bigNumber); // type value is different of datatype so check i
 let myYoutubename = "sagarchannel";
 
 let updateName = myYoutubename;
+updateName = "chaiaurcode"
 
 console.log(myYoutubename);
 console.log(updateName);
+
+let user = {
+    email : "asdf@gmail.com",
+    upiId : "sdf@ybl",
+};
+
+// console.log(user);
+
+
+let userTwo = user;
+userTwo.email = "qwert23@gmail.com";
+
+console.log(user.email);
+console.log(userTwo.email);
