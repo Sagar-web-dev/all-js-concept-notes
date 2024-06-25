@@ -93,3 +93,28 @@ const {counrseInstructor: sagar} = course;   // {} curly braces means the destru
 
 // console.log(counrseInstructor);   //we are able to changing the name also 
 console.log(sagar);
+
+
+////api data fetching and json basic
+   // mainly json me hame data object ke format me milta hai
+
+// {
+//     "name":"sagar",
+//     "coursename":"js in hindi",
+//     "price":"868"
+// }// first way
+
+
+// 2nd format  array ke under object
+[
+{
+    "name":"sagar",
+    "coursename":"js in hindi",
+     "price":"868"
+},
+{
+    "name":"sagar",
+    "coursename":"js in hindi",
+     "price":"868"
+}
+]
