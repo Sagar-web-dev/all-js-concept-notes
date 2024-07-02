@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom SR</title>
+</head>
+<body style="background-color: rgb(53, 51, 51); color: white;">
+      <ul> <div class="language">
+        <li>JavaScript</li>
+      </div></ul>
+</body>
+<script>
+    function addLanguage(language) {
+         const li = document.createElement('li');
+         li.innerText = `${language}`;
+         document.querySelector('.language').appendChild(li);
+    }
+    addLanguage('cpp');
+    addLanguage('ruby');
+
+    function addOptiLanguage(language) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(language))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('python')
+    addOptiLanguage('React')
+
+
+    // Edit the element
+    const thirdLang = document.querySelector("li:nth-child(3)");
+    // thirdLang.innerHTML = ".net";  // not  a good approach
+    const newLi = document.createElement("li");
+    newLi.textContent = ".Net";
+
+    thirdLang.replaceWith(newLi);
+
+
+    // eddit 
+    const  firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>MongoDb<li/>";
+
+    // remove 
+    const  lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+</script>
+
+
+</html>
