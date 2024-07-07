@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Practice</h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    // setTimeout(function(){
+    //     console.log('Sagar learn js');
+    // },2000)    // one method
+
+    // const jsSagar = function() {
+    //     console.log('best js series');
+    // };
+
+    // setTimeout(jsSagar,2000);
+
+    // change innerHtml
+
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = 'Best js series in yt'
+    };
+
+      const changeME = setTimeout(changeText,5000);
+
+    // to stop the setTimeout here is clearTimeout so uske liye hame refrence pass karna pdega
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeME);
+        console.log('timeout stop')
+    })
+
+
+</script>
+</html>

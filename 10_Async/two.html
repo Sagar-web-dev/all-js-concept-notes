@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Practice with Chai aur code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+   
+// setInterval(function(){
+//      console.log('sagar' , Date.now())
+// },2000)   // normal way we save it in the variable and pass that reference
+
+
+const sayDate = function(){
+    console.log('learn Set interval ',Date.now());
+};
+
+   const hiSet =setInterval(sayDate,2000,);
+
+
+
+   // task is to setinterval work on the button start and stop button
+//      so it done by me  on own which boost my confidence
+  
+  document.querySelector('#start').addEventListener('click',function(){
+    setInterval(hiSet);
+    console.log('start interval')
+  })
+
+
+  document.querySelector('#stop').addEventListener('click',function(){
+    clearInterval(hiSet);
+    console.log('stop interval')
+  })
+//    clearInterval(hiSet)
+
+
+
+
+// we pass the third parameter in the setInterval 
+// const sayDate = function(str){
+//     console.log(str,Date.now());
+// };
+
+// setInterval(sayDate,2000, 'hi');
+
+
+
+
+
+
+
+</script>
+</html>
