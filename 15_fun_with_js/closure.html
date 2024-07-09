@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <body style="background-color: #313131;">
+        <button id="orange">Orange</button>
+        <button id="green">Green</button>
+</body>
+<script>
+// function init() {
+//   let name = "Mozilla"; // name is a local variable created by init
+//   function displayName() {
+//     // displayName() is the inner function, that forms the closure
+//     console.log(name); // use variable declared in the parent function
+//   }
+//   displayName();
+// }
+// init();
+
+
+// our old theory we can not access the value o fthe var from outer scope of the fuunction
+
+// function outer(){
+//     let sagar = "sagar";
+
+// }
+
+
+// console.log(sagar);   // it gives that the sagar is undefined
+
+function outer(){
+    let sagar = "sagar";
+    console.log("outer", secret);
+    function inner(){
+        let secret = '123'
+        console.log( " inner function" , sagar);
+    }
+    inner();
+    function innertwo(){
+        console.log( " innertwo function" , sagar);
+        console.log(secret);   // it gives error
+    }
+    inner();
+    innertwo();
+}
+outer();
+console.log("outer function call", sagar);
+
+//this above is called the lexical scoping
+
+// so js work as a family children jo hai parents and grand parents se maang skte hai but bhai bhai me len den nhi hota and same parent children se nhi maang skte
+
+</script>
+<script>
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
+
+    function clickHandler(color){
+        // document.body.style.backgroundColor = `${color}`
+
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+</script>
+</html>
+
+
+
+<!-- 
+Closures
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).
+ In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
+Lexical scoping -->
