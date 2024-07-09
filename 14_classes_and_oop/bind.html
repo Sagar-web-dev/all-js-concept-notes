@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta React</title>
+</head>
+<body>
+    <button>Click me</button>
+</body>
+<script>
+        class React{
+            constructor(){
+                this.library = "React";
+                this.server = "https://localhost:300";
+
+
+                // requirement 
+                 document.querySelector('button').addEventListener('click',this.handleClick.bind(this))
+            }
+
+            handleClick(){
+                console.log("button Clicked");  // without .bind hame button clicked ka access to mil raha but this.server ka nhi so phir waha .bind role me aata hai ye bind kar deta hai all this ko
+                console.log(this);
+                console.log(this.server);
+                console.log(this.server.endsWith);
+            }
+
+        }
+
+        const app = new React()
+</script>
+</html>
